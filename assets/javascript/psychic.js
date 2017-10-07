@@ -29,24 +29,8 @@ document.onkeyup = function(event) {
 
 
 
-// test
 // make append
 $("letters").on("click", function() {
     var buttonPressed = $(this).attr("value");
     $("#playerGuesses").append(playerGuess);
 });
-
-
-//if statement: if playerGuess != to computerGuess, decrease number of guess by 1
-
-//playerGuess != computerGuess {
-//stop game, decrease letter guesses by 1
-//}
-
-//if statement: if playerGuess === computerGuess, stop, increase wins +1
-//playerGuess === computerGuess {
-//stop game, incrase wins by 1
-//}
-
-
-//
