@@ -3,6 +3,11 @@ var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", 
 
 console.log(letters[5]);
 
+var computerGuess = letters[Math.floor(Math.random() * letters.length)];
+
+console.log(computerGuess);
+
+
 // counter variables
 var wins = 0;
 var losses = 0;
@@ -25,16 +30,15 @@ var reset = function() {
 }
 
 var updateGuessesLeft = function() {
-        // Here we are grabbing the HTML element and setting it equal to the guessesLeft. (i.e. guessesLeft will get displayed in HTML)
-        document.querySelector('#guessesLeft').innerHTML = "Guesses left: " + guessesLeft;
+	document.querySelector('#guessesLeft').innerHTML = "Guesses left: " + guessesLeft;
 };
 
 var updatecomputerGuess = function() {
-  this.computerGuess = this.computerGuess[Math.floor(Math.random() * this.letters.length)];
+  	this.computerGuess = this.computerGuess[Math.floor(Math.random() * this.letters.length)];
 };
+
 var updateGuessesSoFar = function() {
-  // Here we take the guesses the user has tried -- then display it as letters separated by commas. 
-  document.querySelector("#playerGuesses").innerHTML = "Your Guesses so far: " + playerGuesses.join(', ');
+  	document.querySelector("#playerGuesses").innerHTML = playerGuesses.join(', ');
 };
 
 
@@ -53,11 +57,11 @@ var updateGuessesSoFar = function() {
                     document.querySelector("#wins").innerHTML = "Wins: " + wins;
                     reset();
                 }
-            } else if (guessesLeft === 0) {
-                // Then we will loss and we'll update the html to display the loss 
+            } 
+
+            if (guessesLeft === 0) {
                 losses++;
                 document.querySelector("#losses").innerHTML = "Losses: " + losses;
-                // Then we'll call the reset. 
                 reset();
             }
         };
