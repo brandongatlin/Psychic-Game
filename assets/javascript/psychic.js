@@ -21,8 +21,8 @@ var updateGuessesLeft = function() {
     document.querySelector('#guessesLeft').innerHTML = "Guesses left: " + guessesLeft;
 };
 
-var updatecomputerGuess = function() {
-    this.computerGuess = this.computerGuess[Math.floor(Math.random() * this.letters.length)];
+var updateComputerGuess = function() {
+    this.computerGuess = this.letters[Math.floor(Math.random() * this.letters.length)];
 };
 
 var updateGuessesSoFar = function() {
@@ -35,7 +35,7 @@ var reset = function() {
     guessesLeft = 9;
     playerGuesses = [];
 
-    updatecomputerGuess();
+    updateComputerGuess();
     updateGuessesLeft();
     updateGuessesSoFar();
 }
