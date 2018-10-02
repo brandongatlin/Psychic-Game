@@ -11,8 +11,6 @@ var guessesLeft = 9;
 var playerGuesses = [];
 var computerGuess = "";
 
-	console.log(guessesLeft);
-
 var computerGuess = letters[Math.floor(Math.random() * letters.length)];
 
 	console.log(computerGuess);
